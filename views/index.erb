@@ -1,0 +1,11 @@
+
+<h1>Liste des recettes</h1>
+<% @recipes.each_with_index do |recipe, index| %>
+  <li>
+    <%= recipe.name %> (<%= recipe.time %>) <a href=<%="/destroy/"+index.to_s%> >supprimer</a>
+  </li>
+<% end %>
+
+<a href="/new"> Ajouter une nouvelle recette</a>
+<a href="/fetch"> Rechercher une nouvelle recette</a>
+
